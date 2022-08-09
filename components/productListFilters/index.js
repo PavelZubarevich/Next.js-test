@@ -13,14 +13,12 @@ const ProductListFilters = ({ filters, addFilters, removeFilter, metaData }) => 
     const param = {}
 
     if (prices.min) {
-      console.log(321);
       param["price[min]"] = prices.min
     } else {
       removeFilter("price[min]")
     }
 
     if (prices.max) {
-      console.log(3211)
       param["price[max]"] = prices.max
     } else {
       removeFilter("price[max]")

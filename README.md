@@ -1,5 +1,20 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Описание
+
+(+)
+1. Верстка 
+2. Фильтрация
+3. Сохранение фильтров в url
+4. Деплой на vercel
+
+(-)
+1. Бэдж новое при отсутствующей картинке
+2. Кнопка добавить в избранное
+3. Фильтрация (выбор нескольких брендов)
+4. Товары и категория в фильтрах меняются местами 
+
+
 ## Getting Started
 
 First, run the development server:

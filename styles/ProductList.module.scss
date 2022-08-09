@@ -1,0 +1,54 @@
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 24px;
+
+  @media(max-width: 768px) {
+    gap: 0px;
+  }
+
+  &__item {
+    width: 25%;
+    max-width: 242px;
+
+    @media(max-width: 1391px) {
+      width: 31%;
+      max-width: 100%;
+    }
+
+    @media(max-width: 1031px) {
+      width: 48%; 
+    }
+
+    @media(max-width: 768px) {
+      width: 100%;
+      // max-width: 100%;
+    }
+  }
+}
+
+.ldsDualRing {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.ldsDualRing:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #000 transparent #000 transparent;
+  animation: ldsDualRing 1.2s linear infinite;
+}
+@keyframes ldsDualRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

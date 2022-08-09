@@ -7,7 +7,6 @@ import NewBadge from '../newBadge';
 import Heart from '../../../assets/icons/heart'
 
 const ProductCard = ({ product }) => {
-
   return (
     <div className={styles.productCard}>
       <div className={styles.productCard__badges}>
@@ -37,7 +36,6 @@ const ProductCard = ({ product }) => {
             <Button text={addToCart} />
             <Heart />
           </div>
-
         </div>
       </div>
     </div>

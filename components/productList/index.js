@@ -15,8 +15,6 @@ const ProductList = ({ products, loading }) => {
         : (<div className={styles.ldsDualRing}></div>)}
     </>
   )
-
-
 }
 
 export default ProductList

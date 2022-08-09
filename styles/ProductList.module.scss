@@ -33,6 +33,7 @@
   width: 80px;
   height: 80px;
 }
+
 .ldsDualRing:after {
   content: " ";
   display: block;
@@ -44,6 +45,7 @@
   border-color: #000 transparent #000 transparent;
   animation: ldsDualRing 1.2s linear infinite;
 }
+
 @keyframes ldsDualRing {
   0% {
     transform: rotate(0deg);

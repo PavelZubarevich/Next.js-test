@@ -13,7 +13,6 @@ export default function Home({ initialProducts, initialFilters, initialMeta }) {
 
   const removeFilter = (param) => {
     const urlParams = Object.fromEntries(new URL(location).searchParams)
-
     const filtredParams = Object.keys(urlParams)
       .filter(key => key !== param)
       .reduce((obj, key) => {
@@ -26,7 +25,6 @@ export default function Home({ initialProducts, initialFilters, initialMeta }) {
     history.pushState(null, document.title, `${location.pathname}?${searchParams.toString()}`)
   }
 
-
   const addFilters = async (param) => {
     setLoading(true)
 
@@ -35,12 +33,10 @@ export default function Home({ initialProducts, initialFilters, initialMeta }) {
 
     history.pushState(null, document.title, `${location.pathname}?${searchParams.toString()}`)
 
-    let url = `https://getlens-master.stage.dev.family/api/pages/obektivy?${searchParams.toString()}`;
-    let username = 'admin';
-    let password = 'Wj3g4W';
-
-    console.log(123, url);
-    let headers = new Headers();
+    const url = `https://getlens-master.stage.dev.family/api/pages/obektivy?${searchParams.toString()}`;
+    const username = 'admin';
+    const password = 'Wj3g4W';
+    const headers = new Headers();
 
     headers.append('Authorization', 'Basic ' + new Buffer(username + ':' + password).toString('base64'));
 
@@ -55,7 +51,6 @@ export default function Home({ initialProducts, initialFilters, initialMeta }) {
         setMeta(data.meta)
         setLoading(false)
       })
-
   }
 
   return (
@@ -76,20 +71,18 @@ export default function Home({ initialProducts, initialFilters, initialMeta }) {
 
 export async function getServerSideProps(context) {
 
-
   const searchParams = new URLSearchParams(context.query);
   const url = `https://getlens-master.stage.dev.family/api/pages/obektivy?${searchParams.toString()}`;
   const username = 'admin';
   const password = 'Wj3g4W';
-
   const headers = new Headers();
+
   headers.append('Authorization', 'Basic ' + new Buffer(username + ':' + password).toString('base64'));
 
   const res = await fetch(url, {
     method: 'GET',
     headers: headers
   })
-
   const data = await res.json();
 
   return {

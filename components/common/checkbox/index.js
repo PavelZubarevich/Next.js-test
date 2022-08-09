@@ -21,7 +21,6 @@ const Checkbox = ({ onChange, label, checked }) => {
         {label}
       </label>
     </>
-
   )
 }
 

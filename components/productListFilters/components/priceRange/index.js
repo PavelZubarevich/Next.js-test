@@ -26,7 +26,6 @@ const PriceRange = ({ prices, setPrices, minPrice, maxPrice }) => {
       <span className={styles.priceRange__separator} />
       <input type="number" value={prices.max} onChange={setMaxPrice} placeholder={maxPrice} />
     </div>
-
   )
 }
 

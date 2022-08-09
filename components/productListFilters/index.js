@@ -39,7 +39,6 @@ const ProductListFilters = ({ filters, addFilters, removeFilter, metaData }) => 
     debouncedAddPricesFilters(prices)
   }, [prices])
 
-
   const onChange = (e, filter, item) => {
     const param = {}
     if (e.target.checked) {

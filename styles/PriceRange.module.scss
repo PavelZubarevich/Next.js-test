@@ -1,0 +1,37 @@
+.priceRange {
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+    width: 50%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: #1B1B1B;
+    padding: 11px;
+    border: none;
+    cursor: pointer;
+  }
+
+  display: flex;
+  max-width: 224px;
+  border: 1px solid #DBDBDB;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &:hover {
+    border: 1px solid #A7A7A7;
+  }
+
+  &__separator {
+    display: block;
+    width: 1px;
+    background-color: #E7E7E7;
+  }
+}

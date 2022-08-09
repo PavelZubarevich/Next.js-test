@@ -2,6 +2,10 @@
   flex: 1 0 272px;
   padding: 0 24px;
 
+  @media(max-width: 768px) {
+    padding: 0 20px;
+  }
+
   &__totalProducts {
     font-weight: 500;
     font-size: 14px;
@@ -15,10 +19,18 @@
     font-size: 32px;
     line-height: 140%;
     margin-bottom: 13px;
+
+    @media(max-width: 768px) {
+      font-size: 26px;
+    }
   }
 
   &__filter {
     margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 15px;
+    }
   }
 
   &__filterName {
@@ -30,5 +42,9 @@
 
   &__checkbox {
     margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
